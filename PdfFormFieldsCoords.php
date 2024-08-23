@@ -1,5 +1,7 @@
 <?php
 
+namespace PdfFormFieldsCoords;
+
 use Smalot\PdfParser\Element\ElementXRef;
 use Smalot\PdfParser\Parser;
 use Smalot\PdfParser\PDFObject;
