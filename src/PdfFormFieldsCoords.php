@@ -29,6 +29,10 @@ class PdfFormFieldsCoords
                         $inputDetails = $page->getDocument()->getObjects()[$elementNr]->getHeader()->getDetails();
                     }
                     if ($inputDetails) {
+                        if (!isset($inputDetails['T']) && !isset($inputDetails['Parent'])) {
+                            continue;
+                        }
+
                         $name = !isset($inputDetails['T']) ? $inputDetails['Parent']['T'] : $inputDetails['T'];
                         $coords = $inputDetails['Rect'];
 
